@@ -1,0 +1,9 @@
+[build]
+  command = "npm install && npm run build"
+  functions = "netlify/functions"
+  publish = "public" # 可选静态文件目录
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
